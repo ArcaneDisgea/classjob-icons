@@ -1,15 +1,23 @@
 # Class/Job Icons
 
-A collection of really nice ClassJob icons at high resolution for FINAL FANTASY XIV. These have been done in Affinity Photo but a PSD is also provided for Photoshop.
+A collection of really nice ClassJob icons at high resolution for FINAL FANTASY XIV.
 
-- Resoltuion: **84 x 84**
-
-> Waifu2x should make the "flat" icons look nice at 2x resolution.
+Included are:
+- `font/FFXIVAppIcons.ttf` a nice font file you could use which includes all sorts of icons
+- `svg/*` a whole host of SVG icons
+- `icons/*` a full set of class/job plain icons using the common Silver+Gold styles.
+- `misc/*` Files from the Job Guide
+- `companion/*` icons from the Companion App
 
 ![SpriteSheet](classjobs_sprite.png)
 
-## Layers
+## Updating
 
-The design file keeps everything in layers so you can toggle on different icons and colours very easily. The colours for the icons are from The Lodestone
+- Grab the `FFXIVAppIcons.tff` file from the companion app, then you need to convert it
+  - `svg`, `woff`, `otf` https://convertio.co/ttf-svg/
+  - `eot` https://everythingfonts.com/ttf-to-eot
 
-![Layers](layers.png)
+- Copy the the converted files into `src`
+- Run: `converter.php` to build the font-file CSS/HTML
+- Run: `svg_rip.js` to build SVG Rips.
+  - This requires node, run `npm install` inside `/src` to get the module we use (`font-blast`)
